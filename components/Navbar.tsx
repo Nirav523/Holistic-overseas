@@ -40,9 +40,9 @@ export const Navbar = () => {
             onClick={scrollToTop}
           >
             <img className="h-10 w-auto" src="/images/logo.png" alt="Holistic Overseas" />
-            <span className={`font-bold text-xl transition-colors duration-300 ${isScrolled ? 'text-black' : 'text-white'}`}>
+            <span className="font-bold text-xl transition-colors duration-300 text-black">
               Holistic
-              <span className={`ml-1 ${isScrolled ? 'text-cyan-500' : 'text-cyan-300'}`}>Overseas</span>
+              <span className="ml-1 text-cyan-500">Overseas</span>
             </span>
           </div>
 
@@ -53,9 +53,7 @@ export const Navbar = () => {
                 <a
                   key={link.name}
                   href={link.href}
-                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300 ${
-                    isScrolled ? 'text-black hover:text-cyan-600' : 'text-white hover:text-cyan-200'
-                  }`}
+                  className="px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300 text-black hover:text-cyan-600"
                 >
                   {link.name}
                 </a>
@@ -68,9 +66,7 @@ export const Navbar = () => {
             <button
               onClick={() => setIsOpen(!isOpen)}
               type="button"
-              className={`inline-flex items-center justify-center p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition-colors duration-300 ${
-                isScrolled ? 'text-black hover:text-cyan-600 hover:bg-gray-100' : 'text-white hover:text-cyan-200 hover:bg-white/10'
-              }`}
+              className="inline-flex items-center justify-center p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition-colors duration-300 text-black hover:text-cyan-600 hover:bg-gray-100"
               aria-controls="mobile-menu"
               aria-expanded={isOpen}
             >
