@@ -15,7 +15,7 @@ import { Footer } from './components/Footer';
 function App() {
   return (
     <main className="w-full min-h-screen bg-[#e5e5e5]">
-      <Navbar />
+      <div id="navbar"><Navbar /></div>
       <Hero />
       <div id="intro"><Intro /></div>
       <div id="global-reach"><GlobalReach /></div>
@@ -23,7 +23,7 @@ function App() {
       <div id="global-hubs"><Destinations /></div>
       <div id="blueprint"><Process /></div>
       <Philosophy />
-      <Contact />
+      <div id="contact"><Contact /></div>
       <div id="faq"><Faq /></div>
       <Footer />
     </main>
