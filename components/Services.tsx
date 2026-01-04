@@ -40,13 +40,13 @@ export const Services: React.FC = () => {
           num="02"
           title="Finest Rice"
           desc="We export premium Basmati and non-Basmati rice, ensuring long grains, rich aroma, and superior quality for global markets."
-          img="/images/Rice.jpg"
+          img="/images/rice.jpg"
         />
         <ServiceCard 
           num="03"
           title="Cumin Seeds"
           desc="Sourcing premium quality cumin seeds, known for their distinct aroma and flavor, perfect for culinary uses worldwide."
-          img="/images/cumin seeds.jpg"
+          img="/images/cuminseeds.jpg"
         />
         <ServiceCard 
           num="04"
