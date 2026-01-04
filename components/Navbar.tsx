@@ -36,10 +36,13 @@ export const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo Section with Scroll to Top */}
           <div 
-            className="flex-shrink-0 cursor-pointer flex items-center" 
+            className="flex-shrink-0 cursor-pointer flex items-center gap-2" 
             onClick={scrollToTop}
           >
-            <img className="h-10" src="/images/logo.png" alt="Holistic Overseas" />
+            <img className="h-10 w-auto" src="/images/logo.png" alt="Holistic Overseas" />
+            <span className={`font-bold text-xl ${isScrolled ? 'text-gray-800' : 'text-white'}`}>
+              Holistic Overseas
+            </span>
           </div>
 
           {/* Desktop Menu */}
@@ -49,7 +52,9 @@ export const Navbar = () => {
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300"
+                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300 ${
+                    isScrolled ? 'text-gray-600 hover:text-gray-900' : 'text-white hover:text-gray-200'
+                  }`}
                 >
                   {link.name}
                 </a>
@@ -62,7 +67,11 @@ export const Navbar = () => {
             <button
               onClick={() => setIsOpen(!isOpen)}
               type="button"
-              className="bg-gray-100 inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-gray-500"
+              className={`inline-flex items-center justify-center p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-gray-500 ${
+                isScrolled 
+                  ? 'bg-gray-100 text-gray-600 hover:text-gray-900 hover:bg-gray-200' 
+                  : 'text-white hover:text-gray-200 hover:bg-white/10'
+              }`}
               aria-controls="mobile-menu"
               aria-expanded={isOpen}
             >
