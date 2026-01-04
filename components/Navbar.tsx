@@ -40,10 +40,10 @@ export const Navbar = () => {
             onClick={scrollToTop}
           >
             <img className="h-10 w-auto" src="/images/logo.png" alt="Holistic Overseas" />
-            <div className={`font-bold text-xl flex gap-1 ${isScrolled ? '' : 'text-white'}`}>
-              <span className={isScrolled ? 'text-black' : 'text-white'}>Holistic</span>
-              <span className={isScrolled ? 'text-teal-600' : 'text-teal-400'}>Overseas</span>
-            </div>
+            <span className={`font-bold text-xl transition-colors duration-300 ${isScrolled ? 'text-black' : 'text-white'}`}>
+              Holistic
+              <span className={`ml-1 ${isScrolled ? 'text-cyan-500' : 'text-cyan-300'}`}>Overseas</span>
+            </span>
           </div>
 
           {/* Desktop Menu */}
@@ -54,7 +54,7 @@ export const Navbar = () => {
                   key={link.name}
                   href={link.href}
                   className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300 ${
-                    isScrolled ? 'text-gray-800 hover:text-teal-600' : 'text-white hover:text-teal-200'
+                    isScrolled ? 'text-black hover:text-cyan-600' : 'text-white hover:text-cyan-200'
                   }`}
                 >
                   {link.name}
@@ -68,10 +68,8 @@ export const Navbar = () => {
             <button
               onClick={() => setIsOpen(!isOpen)}
               type="button"
-              className={`inline-flex items-center justify-center p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-gray-500 ${
-                isScrolled 
-                  ? 'text-gray-800 hover:text-teal-600 hover:bg-gray-100' 
-                  : 'text-white hover:text-teal-200 hover:bg-white/10'
+              className={`inline-flex items-center justify-center p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition-colors duration-300 ${
+                isScrolled ? 'text-black hover:text-cyan-600 hover:bg-gray-100' : 'text-white hover:text-cyan-200 hover:bg-white/10'
               }`}
               aria-controls="mobile-menu"
               aria-expanded={isOpen}
@@ -100,7 +98,7 @@ export const Navbar = () => {
                 key={link.name}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="text-gray-800 hover:text-teal-600 block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-50"
+                className="text-black hover:text-cyan-600 block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100"
               >
                 {link.name}
               </a>
