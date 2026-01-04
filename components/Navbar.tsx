@@ -54,3 +54,18 @@ export const Navbar: React.FC = () => {
     </nav>
   );
 };
+
+
+{menuOpen && (
+  <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-lg z-50">
+    <div className="flex flex-col items-center gap-6 py-6 text-sm uppercase tracking-widest">
+      <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
+      <a href="#services" onClick={() => setMenuOpen(false)}>Services</a>
+      <a href="#process" onClick={() => setMenuOpen(false)}>Process</a>
+      <a href="#destinations" onClick={() => setMenuOpen(false)}>Destinations</a>
+      <a href="#contact" className="bg-[rgba(55,205,250)] px-6 py-2 text-white" onClick={() => setMenuOpen(false)}>
+        Inquiry // Open
+      </a>
+    </div>
+  </div>
+)}
