@@ -46,7 +46,7 @@ export const Navbar: React.FC = () => {
         </div>
         
         {/* Mobile Mini Toggle */}
-        <div className="md:hidden">
+        <div className="md:hidden cursor-pointer" onClick={() => setMenuOpen(!menuOpen)} >
           <div className="w-6 h-0.5 mb-1 bg-neutral-900"></div>
           <div className="w-6 h-0.5 bg-neutral-900"></div>
         </div>
