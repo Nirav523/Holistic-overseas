@@ -14,7 +14,7 @@ export const Navbar: React.FC = () => {
     const link = (document.querySelector("link[rel*='icon']") as HTMLLinkElement) || document.createElement('link');
     link.type = 'image/png';
     link.rel = 'shortcut icon';
-    link.href = '/images/Logo.png';
+    link.href = '/public/images/Logo.png';
     document.head.appendChild(link);
 
     return () => window.removeEventListener('scroll', handleScroll);
@@ -24,7 +24,7 @@ export const Navbar: React.FC = () => {
     <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${scrolled ? 'py-4 bg-white/80 backdrop-blur-md border-b border-neutral-200 shadow-sm' : 'py-8 bg-transparent'}`}>
       <div className="max-w-7xl mx-auto px-8 md:px-16 flex justify-between items-center">
         <div className="flex items-center gap-3 group cursor-pointer" onClick={() => window.location.reload()}>
-          <img src="/images/Logo.png" alt="Holistic Overseas Logo" className="h-10 w-auto object-contain group-hover:scale-105 transition-transform duration-500" />
+          <img src="/public/images/Logo.png" alt="Holistic Overseas Logo" className="h-10 w-auto object-contain group-hover:scale-105 transition-transform duration-500" />
           <span className="font-display text-2xl tracking-tighter text-neutral-900">
             HOLISTIC <span className="text-[rgba(55,205,250)]">OVERSEAS</span>
           </span>

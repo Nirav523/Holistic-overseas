@@ -11,7 +11,7 @@ export const Footer: React.FC = () => {
           </h2>
           
           <div className="w-full lg:w-1/3 flex flex-col lg:items-end space-y-6">
-            <img src="/images/Logo.png" alt="Holistic Overseas" className="h-30 w-auto object-contain" />
+            <img src="/public/images/Logo.png" alt="Holistic Overseas" className="h-30 w-auto object-contain" />
             {/* <div className="flex gap-6">
                <a href="#" className="text-[rgba(55,205,250)] font-bold text-xs uppercase tracking-widest hover:text-neutral-900 transition-colors">LinkedIn</a>
                <a href="#" className="text-[rgba(55,205,250)] font-bold text-xs uppercase tracking-widest hover:text-neutral-900 transition-colors">Instagram</a>
