@@ -34,19 +34,19 @@ export const Services: React.FC = () => {
           num="01"
           title="Premium Onions"
           desc="Sourcing the finest red and white onions from certified farms, ensuring optimal shelf life and quality for global distribution."
-          img="/public/images/onion.jpeg"
+          img="/Public/images/onion.jpeg"
         />
         <ServiceCard 
           num="02"
           title="Finest Rice"
           desc="We export premium Basmati and non-Basmati rice, ensuring long grains, rich aroma, and superior quality for global markets."
-          img="/public/images/Rice.jpg"
+          img="/Public/images/Rice.jpg"
         />
         <ServiceCard 
           num="03"
           title="Cumin Seeds"
           desc="Sourcing premium quality cumin seeds, known for their distinct aroma and flavor, perfect for culinary uses worldwide."
-          img="/public/images/cumin seeds.jpg"
+          img="/Public/images/cumin seeds.jpg"
         />
         <ServiceCard 
           num="04"

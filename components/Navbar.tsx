@@ -14,7 +14,7 @@ export const Navbar: React.FC = () => {
     const link = (document.querySelector("link[rel*='icon']") as HTMLLinkElement) || document.createElement('link');
     link.type = 'image/png';
     link.rel = 'shortcut icon';
-    link.href = '/public/images/Logo.png';
+    link.href = '/Public/images/Logo.png';
     document.head.appendChild(link);
 
     return () => window.removeEventListener('scroll', handleScroll);
