@@ -30,8 +30,7 @@ export const Navbar = () => {
             className="flex-shrink-0 cursor-pointer flex items-center" 
             onClick={scrollToTop}
           >
-            {/* Replace the span below with an <img /> tag if you have a logo file */}
-            <span className="font-bold text-xl text-gray-800">Holistic Overseas</span>
+            <img className="h-10" src="/images/logo.png" alt="Holistic Overseas" />
           </div>
 
           {/* Desktop Menu */}
