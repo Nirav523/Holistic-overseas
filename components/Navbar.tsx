@@ -31,7 +31,7 @@ export const Navbar = () => {
   };
 
   return (
-    <nav className={`fixed w-full z-50 top-0 left-0 transition-all duration-300 ${isScrolled ? 'bg-gray-900/80 backdrop-blur-md shadow-md' : 'bg-transparent'}`}>
+    <nav className={`fixed w-full z-50 top-0 left-0 transition-all duration-300 ${isScrolled ? 'bg-white/90 backdrop-blur-md shadow-md' : 'bg-transparent'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo Section with Scroll to Top */}
@@ -40,9 +40,10 @@ export const Navbar = () => {
             onClick={scrollToTop}
           >
             <img className="h-10 w-auto" src="/images/logo.png" alt="Holistic Overseas" />
-            <span className="font-bold text-xl text-white">
-              Holistic Overseas
-            </span>
+            <div className={`font-bold text-xl flex gap-1 ${isScrolled ? '' : 'text-white'}`}>
+              <span className={isScrolled ? 'text-black' : 'text-white'}>Holistic</span>
+              <span className={isScrolled ? 'text-teal-600' : 'text-teal-400'}>Overseas</span>
+            </div>
           </div>
 
           {/* Desktop Menu */}
@@ -53,7 +54,7 @@ export const Navbar = () => {
                   key={link.name}
                   href={link.href}
                   className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300 ${
-                    isScrolled ? 'text-gray-300 hover:text-white' : 'text-white hover:text-gray-200'
+                    isScrolled ? 'text-gray-800 hover:text-teal-600' : 'text-white hover:text-teal-200'
                   }`}
                 >
                   {link.name}
@@ -69,8 +70,8 @@ export const Navbar = () => {
               type="button"
               className={`inline-flex items-center justify-center p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-gray-500 ${
                 isScrolled 
-                  ? 'text-gray-300 hover:text-white hover:bg-gray-700' 
-                  : 'text-white hover:text-gray-200 hover:bg-white/10'
+                  ? 'text-gray-800 hover:text-teal-600 hover:bg-gray-100' 
+                  : 'text-white hover:text-teal-200 hover:bg-white/10'
               }`}
               aria-controls="mobile-menu"
               aria-expanded={isOpen}
@@ -92,14 +93,14 @@ export const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-gray-900/95 backdrop-blur-md border-t border-gray-700" id="mobile-menu">
+        <div className="md:hidden bg-white border-t border-gray-200" id="mobile-menu">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 shadow-lg">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700"
+                className="text-gray-800 hover:text-teal-600 block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-50"
               >
                 {link.name}
               </a>
