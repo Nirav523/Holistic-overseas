@@ -13,12 +13,24 @@ export const Navbar = () => {
     { name: 'Contact', href: '#contact' },
   ];
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+    setIsOpen(false); // Close mobile menu if it's open
+  };
+
   return (
     <nav className="bg-white shadow-md fixed w-full z-50 top-0 left-0">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Logo Section */}
-          <div className="flex-shrink-0 cursor-pointer" onClick={() => window.scrollTo(0, 0)}>
+          {/* Logo Section with Scroll to Top */}
+          <div 
+            className="flex-shrink-0 cursor-pointer flex items-center" 
+            onClick={scrollToTop}
+          >
+            {/* Replace the span below with an <img /> tag if you have a logo file */}
             <span className="font-bold text-xl text-gray-800">Holistic Overseas</span>
           </div>
 
@@ -61,7 +73,7 @@ export const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu (Conditional Rendering) */}
+      {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden bg-white border-t border-gray-200" id="mobile-menu">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 shadow-lg">
