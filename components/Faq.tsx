@@ -1,4 +1,4 @@
-
+import useMetadata from '../hooks/useMetadata';
 import React, { useState } from 'react';
 
 const FaqItem: React.FC<{ question: string; answer: string }> = ({ question, answer }) => {
@@ -24,6 +24,11 @@ const FaqItem: React.FC<{ question: string; answer: string }> = ({ question, ans
 };
 
 export const Faq: React.FC = () => {
+  useMetadata(
+    "Export FAQs | Common Questions on Agri Trade", 
+    "Find answers to common questions about agricultural export procedures, quality certifications, minimum order quantities (MOQ), and shipping timelines."
+  );
+
   return (
     <section className="w-full py-16 px-8 md:px-16 bg-white text-neutral-900">
       <div className="max-w-4xl mx-auto">

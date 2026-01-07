@@ -1,4 +1,4 @@
-
+import useMetadata from '../hooks/useMetadata';
 import React from 'react';
 
 const GalleryItem: React.FC<{ src: string; location: string; name: string; uni: string }> = ({ src, location, name, uni }) => (
@@ -18,6 +18,11 @@ const GalleryItem: React.FC<{ src: string; location: string; name: string; uni: 
 );
 
 export const Gallery: React.FC = () => {
+  useMetadata(
+    "Agri Product Gallery | High-Quality Export Catalog", 
+    "Browse our collection of premium Indian agricultural exports. See our high-quality sourcing and packaging for spices, grains, and pulses ready for global shipment."
+  );
+
   return (
     <section className="w-full py-16 bg-white text-neutral-900 px-8 md:px-16">
       <div className="max-w-7xl mx-auto">

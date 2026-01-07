@@ -1,6 +1,5 @@
-
+import useMetadata from '../hooks/useMetadata';
 import React, { useEffect, useRef } from 'react';
-
 
 const CertificateCard: React.FC<{ icon: string; title: string; subtitle: string }> = ({ icon, title, subtitle }) => (
   <div className="relative w-60 h-80 bg-white border border-white/20 p-6 flex flex-col items-center justify-between hover:-translate-y-2 transition-transform duration-500 group hover:shadow-2xl cursor-default">
@@ -30,6 +29,11 @@ const CertificateCard: React.FC<{ icon: string; title: string; subtitle: string 
 export const Philosophy: React.FC = () => {
   const mapRef = useRef<HTMLDivElement>(null);
   const mapInstanceRef = useRef<any>(null);
+
+  useMetadata(
+    "Our Export Philosophy | Commitment to Quality", 
+    "At Holistic Overseas, our philosophy is built on transparency and excellence. We ensure every agricultural product exported meets international safety and quality standards."
+  );
 
   useEffect(() => {
     const initMap = () => {

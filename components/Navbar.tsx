@@ -1,8 +1,15 @@
+import useMetadata from '../hooks/useMetadata';
 import React, { useState, useEffect } from 'react';
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+
+  // Acts as the base identity for your site navigation
+  useMetadata(
+    "Holistic Overseas | Global Agri-Trade Partner", 
+    "Navigating global markets with premium Indian agricultural produce. Explore our products, services, and global reach."
+  );
 
   useEffect(() => {
     const handleScroll = () => {

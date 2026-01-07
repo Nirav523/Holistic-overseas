@@ -1,7 +1,12 @@
-
+import useMetadata from '../hooks/useMetadata';
 import React from 'react';
 
 export const Footer: React.FC = () => {
+  useMetadata(
+    "Holistic Overseas | Indian Agri-Export Company", 
+    "Your trusted global partner for high-quality agricultural products. Exporting the best of Indian produce to international markets with excellence."
+  );
+
   return (
     <footer className="w-full bg-white text-neutral-900 pt-8 md:pt-10 pb-6 px-8 md:px-16">
       <div className="max-w-7xl mx-auto">

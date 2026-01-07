@@ -1,3 +1,4 @@
+import useMetadata from '../hooks/useMetadata';
 import React from 'react';
 
 const Step: React.FC<{ 
@@ -63,6 +64,11 @@ const Step: React.FC<{
 );
 
 export const Process: React.FC = () => {
+  useMetadata(
+    "Our Export Process | From Farm to Global Markets", 
+    "A streamlined 4-step export process: Sourcing, Quality Testing, Professional Packaging, and Global Logistics. We ensure seamless agricultural trade from India to the world."
+  );
+
   return (
     <section className="w-full py-6 md:py-8 px-8 md:px-16 bg-white text-neutral-900 relative overflow-hidden">
       {/* Background Technical Markers */}

@@ -1,4 +1,4 @@
-
+import useMetadata from '../hooks/useMetadata';
 import React from 'react';
 
 const ServiceCard: React.FC<{ title: string; desc: string; num: string; img: string }> = ({ title, desc, num, img }) => (
@@ -16,6 +16,12 @@ const ServiceCard: React.FC<{ title: string; desc: string; num: string; img: str
 );
 
 export const Services: React.FC = () => {
+  // SEO for your Agricultural Export Business
+  useMetadata(
+    "Agriculture Export Services | Holistic Overseas", 
+    "Leading Indian exporter of premium agricultural products. We supply high-quality grains, pulses, and spices to global markets."
+  );
+
   return (
     <section id="services" className="w-full py-16 bg-white text-neutral-900 px-8 md:px-16">
       <div className="flex flex-col md:flex-row gap-12 mb-10">

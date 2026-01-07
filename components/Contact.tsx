@@ -1,7 +1,11 @@
-
+import useMetadata from '../hooks/useMetadata';
 import React from 'react';
 
 export const Contact: React.FC = () => {
+  useMetadata(
+    "Contact Us | Export Inquiries & Quotes", 
+    "Connect with Holistic Overseas for premium agricultural export inquiries. Request a quote for bulk orders of spices, grains, and produce with worldwide shipping."
+  );
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();

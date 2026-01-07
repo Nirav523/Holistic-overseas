@@ -1,4 +1,4 @@
-  
+import useMetadata from '../hooks/useMetadata';
 import React from 'react';
 
 const DestinationCard: React.FC<{ country: string; highlight: string; img: string }> = ({ country, highlight, img }) => (
@@ -15,6 +15,11 @@ const DestinationCard: React.FC<{ country: string; highlight: string; img: strin
 );
 
 export const Destinations: React.FC = () => {
+  useMetadata(
+    "Global Export Destinations | Holistic Overseas", 
+    "Supplying premium Indian agricultural products to major markets worldwide. We export to the Middle East, Europe, USA, and Asia with efficient global logistics."
+  );
+
   return (
     <section className="w-full pt-6 pb-16 px-8 md:px-16 bg-white text-neutral-900">
       <div className="max-w-7xl mx-auto">

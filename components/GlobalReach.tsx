@@ -1,7 +1,11 @@
-
+import useMetadata from '../hooks/useMetadata';
 import React from 'react';
 
 export const GlobalReach: React.FC = () => {
+  useMetadata(
+    "Our Global Reach | International Agri-Supply Chain", 
+    "Holistic Overseas connects Indian farmers to the world. We have an extensive logistics network ensuring timely delivery of agricultural products to every continent."
+  );
   return (
     <section className="w-full bg-white text-neutral-900 py-10 px-8 md:px-16">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">

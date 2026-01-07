@@ -1,7 +1,11 @@
-
+import useMetadata from '../hooks/useMetadata';
 import React from 'react';
 
 export const Intro: React.FC = () => {
+  useMetadata(
+    "About Holistic Overseas | Our Journey & Expertise", 
+    "Learn how Holistic Overseas bridges the gap between Indian farmers and global markets through sustainable sourcing and rigorous quality standards."
+  );
   return (
     <section className="w-full py-12 px-8 md:px-16 flex flex-col items-center justify-center bg-white">
       <div className="max-w-4xl text-center space-y-12">

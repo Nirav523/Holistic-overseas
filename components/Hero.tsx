@@ -1,7 +1,11 @@
-
+import useMetadata from '../hooks/useMetadata';
 import React from 'react';
 
 export const Hero: React.FC = () => {
+  useMetadata(
+    "Holistic Overseas | Leading Agricultural Exporters from India", 
+    "Premium quality agricultural products exported globally. Specializing in high-grade spices, grains, and pulses with a commitment to excellence and reliability."
+  );
   return (
     <section className="relative w-full h-screen overflow-hidden bg-white text-neutral-900 flex flex-col">
       <div className="absolute inset-0 transition-all duration-1000">
