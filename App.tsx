@@ -16,7 +16,7 @@ import { Footer } from './components/Footer';
 
 function App() {
   return (
-    <>
+    <div>
       <main className="w-full min-h-screen bg-[#e5e5e5]">
         <div id="navbar"><Navbar /></div>
         <Hero />
@@ -32,7 +32,7 @@ function App() {
       </main>
       <SpeedInsights />
       <Analytics />
-    </>
+    </div>
   );
 }
 
