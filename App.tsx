@@ -1,3 +1,5 @@
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 import React from 'react';
 import { Navbar } from './components/Navbar';
@@ -14,19 +16,23 @@ import { Footer } from './components/Footer';
 
 function App() {
   return (
-    <main className="w-full min-h-screen bg-[#e5e5e5]">
-      <div id="navbar"><Navbar /></div>
-      <Hero />
-      <div id="intro"><Intro /></div>
-      <div id="global-reach"><GlobalReach /></div>
-      <div id="services"><Services /></div>
-      <div id="global-hubs"><Destinations /></div>
-      <div id="blueprint"><Process /></div>
-      <Philosophy />
-      <div id="contact"><Contact /></div>
-      <div id="faq"><Faq /></div>
-      <Footer />
-    </main>
+    <>
+      <main className="w-full min-h-screen bg-[#e5e5e5]">
+        <div id="navbar"><Navbar /></div>
+        <Hero />
+        <div id="intro"><Intro /></div>
+        <div id="global-reach"><GlobalReach /></div>
+        <div id="services"><Services /></div>
+        <div id="global-hubs"><Destinations /></div>
+        <div id="blueprint"><Process /></div>
+        <Philosophy />
+        <div id="contact"><Contact /></div>
+        <div id="faq"><Faq /></div>
+        <Footer />
+      </main>
+      <SpeedInsights />
+      <Analytics />
+    </>
   );
 }
 
